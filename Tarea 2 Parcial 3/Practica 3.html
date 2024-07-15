@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Concatenar Cadenas</title>
+</head>
+<body>
+  <p id="resultado"></p>
+
+  <script>
+    function concatenarCadenas() {
+      let resultado = '';
+      let cadena;
+
+      while (true) {
+        cadena = prompt("Introduce una cadena de texto (o presiona Cancelar para finalizar):");
+        if (cadena === null) {
+          break;
+        }
+        if (resultado === '') {
+          resultado = cadena;
+        } else {
+          resultado += '-' + cadena;
+        }
+      }
+
+      document.getElementById("resultado").textContent = resultado;
+    }
+
+    window.onload = concatenarCadenas;
+  </script>
+</body>
+</html>
